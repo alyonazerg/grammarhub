@@ -1,0 +1,53 @@
+/* Classroom slides: normal document layout is preserved outside board mode. */
+.board-slide-controls[hidden],.board-slide[hidden]{display:none!important}
+.board-mode{overflow:hidden;background:var(--paper)}
+.board-mode .site-header{height:64px;min-height:64px;padding:8px 24px;flex-wrap:nowrap;gap:15px}
+.board-mode .site-header .brand-mark{height:38px;width:38px;font-size:30px}
+.board-mode .site-header .brand{font-size:.85rem}
+.board-mode .main-nav{display:flex;flex-wrap:nowrap;gap:18px;border:0;padding:0;order:0;width:auto}
+.board-mode .main-nav button{font-size:14px}
+.board-mode .header-tools{margin-left:auto}
+.board-mode .workspace{display:block;min-height:0;height:calc(100dvh - 64px)}
+.board-mode #app{width:100%;max-width:1500px;height:100%;margin:0 auto;padding:12px 28px 88px;overflow:hidden;min-width:0;font-size:var(--board-content-size,24px)}
+.board-mode .lesson-header{padding:0 0 4px;display:flex;align-items:center;gap:18px;flex-wrap:wrap}
+.board-mode .lesson-header h1{font-size:28px;line-height:1.1;margin:0;max-width:none}
+.board-mode .lesson-header>.eyebrow{font-size:11px;margin:0}
+.board-mode .lesson-header>p:not(.eyebrow){display:none}
+.board-mode .stage-nav{padding:4px 0 8px;margin:0 0 10px;gap:6px;flex-wrap:wrap;overflow:visible}
+.board-mode .stage-button{font-size:14px;min-height:40px;padding:7px 12px}
+.board-mode .stage-content{max-width:none;min-width:0}
+.board-mode .board-slide{min-width:0;max-width:100%;overflow:visible;padding:0 2px 3px}
+.board-mode .board-slide.board-fit-scroll{overflow-y:auto;overscroll-behavior:contain;scrollbar-gutter:stable;padding-right:14px;border-right:3px solid var(--lime)}
+.board-mode .board-slide>h2,.board-mode .board-slide>.toolbar h2{font-size:1.25em;margin-bottom:.4em}
+.board-mode .board-slide>.eyebrow{font-size:12px;margin-bottom:4px}
+.board-mode .board-slide>p{margin-bottom:.5em}
+.board-mode .board-slide .theory-card,.board-mode .board-slide .question-card,.board-mode .board-slide .assessment-section{padding:18px 24px;margin:0 0 8px;border-radius:12px;max-width:100%;min-width:0}
+.board-mode .board-slide p,.board-mode .board-slide li,.board-mode .board-slide .option,.board-mode .board-slide label,.board-mode .board-slide .flash-definition,.board-mode .board-slide .flash-note{font-size:1em;line-height:1.4;overflow-wrap:anywhere}
+.board-mode .board-slide h2{font-size:1.45em}
+.board-mode .board-slide h3{font-size:1.15em;line-height:1.2;margin-bottom:.5em}
+.board-mode .board-slide .example{font-size:1.05em;line-height:1.4;padding:10px 16px;margin:10px 0}
+.board-mode .board-slide .source-note{font-size:12px;line-height:1.3;margin:8px 0;color:var(--muted)}
+.board-mode .board-slide .option{min-height:44px;padding:9px 14px;margin:6px 0}
+.board-mode .board-slide .feedback{padding:12px 16px;margin:10px 0;min-width:0;max-width:100%;overflow-wrap:anywhere}
+.board-mode .board-slide .feedback p{margin:4px 0 0}
+.board-mode .board-slide .toolbar{margin:10px 0 0;gap:10px;flex-wrap:wrap}
+.board-mode .board-slide .button,.board-mode .board-slide .button-secondary{font-size:17px;min-height:44px;padding:9px 15px;max-width:100%;white-space:normal}
+.board-mode .board-slide textarea{font-size:18px;min-height:90px;max-height:160px}
+.board-mode .board-slide details{margin:8px 0;padding:12px 16px}
+.board-mode .board-slide summary{font-size:.9em;min-height:36px}
+.board-mode .board-slide .hero{padding:8px 0 16px}
+.board-mode .board-slide .hero h1{font-size:clamp(40px,5vw,64px)}
+.board-mode .board-slide .hero-art{min-height:220px;max-height:300px}
+.board-mode .board-topic-block>.session-card,.board-mode .board-topic-block>.glossary-card{max-width:1100px;margin:0 auto}
+.board-mode .board-topic-block>.session-card h3{font-size:1.6em;max-width:none}
+.board-mode .board-topic-block>.session-card p{font-size:1em}
+.board-slide-controls{position:fixed;z-index:100;bottom:0;left:0;right:0;background:var(--paper);border-top:1px solid var(--line);padding:10px 24px;display:flex;justify-content:center;align-items:center;gap:20px;min-height:68px;box-shadow:0 -4px 20px #183d3508}
+.board-slide-controls button{font-size:16px;min-height:44px;padding:9px 18px}
+.board-slide-count{font:600 15px system-ui,sans-serif;min-width:105px;text-align:center}
+.board-fullscreen-note{font-size:12px;max-width:260px;line-height:1.3}
+.board-fullscreen-note:empty{display:none}
+@media(max-width:760px){.board-mode .site-header{padding:6px 12px;height:60px;min-height:60px}.board-mode .main-nav{display:none}.board-mode #app{padding:10px 12px 82px}.board-mode .workspace{height:calc(100dvh - 60px)}.board-mode .lesson-header h1{font-size:23px}.board-mode .lesson-header .eyebrow{display:none}.board-mode .stage-nav{gap:2px}.board-mode .stage-button{font-size:12px;padding:6px 8px;min-height:36px}.board-mode .board-slide .theory-card,.board-mode .board-slide .question-card{padding:15px}.board-slide-controls{gap:8px;padding:8px 10px}.board-slide-controls button{font-size:13px;padding:8px 10px}.board-slide-count{font-size:13px;min-width:80px}.board-fullscreen-note{display:none}.board-mode .board-slide .hero-art{display:none}}
+@media print{.board-slide-controls{display:none!important}.board-mode{overflow:visible}.board-mode #app,.board-mode .workspace{height:auto;overflow:visible}.board-mode .board-slide[hidden]{display:block!important}.board-mode .board-slide{max-height:none!important;overflow:visible!important;break-after:page}}
+
+/* The task card repeats its stage and purpose; omit only the duplicated prelude. */
+.board-mode .board-task-slide>p,.board-mode .board-task-slide>h2,.board-mode .board-task-slide>.section-heading,.board-mode .board-task-slide>.topic-warmup,.board-mode .board-task-slide>.workshop-heading{display:none}
